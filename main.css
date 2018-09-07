@@ -1,3 +1,13 @@
 body {
     background-color:lightpink; 
 }
+#input_textareaContainer {
+    margin-bottom: 20px;
+}
+#output_textareaContainer {
+    border: 1px solid grey;
+    width: 27.3%;
+    height: 200px;
+    margin-top: 20px;
+    background-color: white;
+}
