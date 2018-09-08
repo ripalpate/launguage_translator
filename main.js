@@ -63,6 +63,20 @@ const newStringBuilderItalianLang = () => {
     printToDom(outputStringItalian, 'output_textarea');    
 }
 
+let hindiButton = document.getElementById("hindiBtn");
+hindiButton.addEventListener("click", () => {
+    newStringBuilderHindiLang();
+});
+
+let spanishButton = document.getElementById("spanishBtn")
+spanishButton.addEventListener("click", () => {
+    newStringBuilderSpanishLang();
+});
+
+let italianButton = document.getElementById("italianBtn")
+italianButton.addEventListener("click", () => {
+    newStringBuilderItalianLang();
+});
 
 
 
