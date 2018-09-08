@@ -1,81 +1,94 @@
-let hindiLang = {
+const hindiLang = {
+    "wish": "tamanna",
+    "you": "tumhe",
+    "a": "a",
     "merry": "merry",
     "christmas": "christmas",
     "and": "aur",
     "happy": "mubarak",
     "new": "naya",
-    "year": "saal"
+    "year": "saal",
+    "from": "se",
+    "family": "parivaar",
+    "have": "hai",
+    "peace":"shaanti",
+    "joy": "khushi",
+    "love": "pyaar",
+    "to": "seva mere",
+    "your": "aapke"
 };
 
-let spanishLang = {
+const spanishLang = {
+    "wish": "deseo",
+    "you": "tu",
+    "a": "un",
     "merry": "feliz",
     "christmas": "navidad",
     "and": "y",
     "happy": "prospero",
     "new": "ano",
-    "year": "nuevo"
+    "year": "nuevo",
+    "from": "de",
+    "family": "familia",
+    "have": "tener",
+    "peace":"paz",
+    "joy": "alegría",
+    "love": "amor",
+    "to": "para",
+    "your": "usted"
 };
 
-let italianLang = {
+const italianLang = {
+    "wish": "desiderio",
+    "you": "tu",
+    "a": "un",
     "merry": "buon",
     "christmas": "natale",
     "and": "e",
     "happy": "felice",
     "new": "anno",
-    "year": "nuovo"
+    "year": "nuovo",
+    "from": "a partire dal",
+    "family": "famiglia",
+    "have": "avere",
+    "peace":"pace",
+    "joy": "gioia",
+    "love": "amore",
+    "to": "alla",
+    "your": "tua"
 };
 
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = stringToPrint;
 }
-
-let outputStringHindi = '';
-const newStringBuilderHindiLang = () => {
-    let inputString1 = document.getElementById('input_textarea');
-    let inputString = inputString1.value.toLowerCase();
+let outputString = '';
+const newLangStringBuilder = (language) => {
+    outputString = ' ';
+    let inputString = document.getElementById('input_textarea').value.toLowerCase();
     let inputStringArray = inputString.split(' ');
     for (let i = 0; i < inputStringArray.length; i++) {
-        outputStringHindi += `  ${hindiLang[inputStringArray[i]]}`;
+        outputString += `  ${language[inputStringArray[i]]}`;
+        if (!language[inputStringArray[i]]){
+            alert('Please try different words. word not found');
+        }
     }
-    printToDom(outputStringHindi, 'output_textarea');
-}
-
-let outputStringSpanish = '';
-const newStringBuilderSpanishLang = () => {
-    let inputString1 = document.getElementById('input_textarea');
-    let inputString = inputString1.value.toLowerCase();
-    let inputStringArray = inputString.split(' ');
-    for (let i= 0; i < inputStringArray.length; i++) {
-        outputStringSpanish += `  ${spanishLang[inputStringArray[i]]} `;
-    }
-    printToDom(outputStringSpanish, 'output_textarea');   
-}
-
-let outputStringItalian = '';
-const newStringBuilderItalianLang = () => {
-    let inputString1 = document.getElementById('input_textarea');
-    let inputString = inputString1.value.toLowerCase();
-    let inputStringArray = inputString.split(' ');
-    for (let i= 0; i < inputStringArray.length; i++) {
-        outputStringItalian += `  ${italianLang[inputStringArray[i]]} `;
-    }
-    printToDom(outputStringItalian, 'output_textarea');    
+    printToDom(outputString, 'output_textarea');
 }
 
 let hindiButton = document.getElementById("hindiBtn");
 hindiButton.addEventListener("click", () => {
-    newStringBuilderHindiLang();
+    newLangStringBuilder(hindiLang);
 });
 
 let spanishButton = document.getElementById("spanishBtn")
 spanishButton.addEventListener("click", () => {
-    newStringBuilderSpanishLang();
+    newLangStringBuilder(spanishLang);
 });
 
 let italianButton = document.getElementById("italianBtn")
 italianButton.addEventListener("click", () => {
-    newStringBuilderItalianLang();
+    newLangStringBuilder(italianLang);
 });
 
 
