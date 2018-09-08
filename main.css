@@ -1,13 +1,61 @@
 body {
-    background-color:lightpink; 
+    background-image: url('https://www.mitopatients.org/images/groenekerst2017.jpg'); 
+    text-align: center;
+}
+.main_header {
+    font-size: 50px;
+    font-family: 'Fjalla One', sans-serif;
+    color: rgb(160, 30, 30);
+    text-shadow: 2px 2px black;
 }
 #input_textareaContainer {
     margin-bottom: 20px;
 }
+#input_textarea {
+    box-shadow: 5px 5px lightsteelblue;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Noto Serif JP', sans-serif;
+}
 #output_textareaContainer {
     border: 1px solid grey;
-    width: 27.3%;
-    height: 200px;
-    margin-top: 20px;
+    margin: 20px 375px;
     background-color: white;
+    height: 250px;
+    box-shadow: 5px 5px lightsteelblue;
+    border-radius: 10px;
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 20px;
+}
+#spanishBtn:hover {
+    padding-right: 10px; 
+    padding-left: 10px;
+    background-color:lightcoral;
+}
+#hindiBtn, #italianBtn {
+    padding-right: 20px; 
+    padding-left: 20px;   
+    background-color: blueviolet;
+}
+#spanishBtn, #italianBtn, #hindiBtn {
+    margin-right: 50px;
+    background-color: rgb(172, 11, 65);
+    font-size: 20px;
+    border-radius: 7px;
+    border: none;
+}
+#spanishBtn:hover {
+    padding-right: 10px; 
+    padding-left: 10px;
+    background-color:lightcoral;
+    cursor: pointer;
+}
+#hindiBtn:hover {
+    background-color:lightcoral;
+    cursor: pointer;
+}
+#italianBtn:hover {
+    background-color: lightcoral;
+    cursor: pointer;
 }
