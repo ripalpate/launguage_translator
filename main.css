@@ -38,7 +38,7 @@ body {
     padding-left: 20px;   
     background-color: blueviolet;
 }
-#spanishBtn, #italianBtn, #hindiBtn {
+#spanishBtn, #italianBtn, #hindiBtn, #luckyBtn {
     margin-right: 50px;
     background-color: rgb(172, 11, 65);
     font-size: 20px;
@@ -56,6 +56,11 @@ body {
     cursor: pointer;
 }
 #italianBtn:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+#luckyBtn:hover {
     background-color: lightcoral;
     cursor: pointer;
 }

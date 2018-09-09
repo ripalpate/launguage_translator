@@ -76,6 +76,17 @@ const newLangStringBuilder = (language) => {
     printToDom(outputString, 'output_textarea');
 }
 
+const randLang = () => {
+    randLangBox = Math.floor(Math.random()*3);
+    if (randLangBox===0) {
+        newLangStringBuilder(hindiLang);
+    } else if (randLangBox===1){
+        newLangStringBuilder(spanishLang);
+    } else {
+        newLangStringBuilder(italianLang);
+    }
+}
+
 let hindiButton = document.getElementById("hindiBtn");
 hindiButton.addEventListener("click", () => {
     newLangStringBuilder(hindiLang);
@@ -91,7 +102,10 @@ italianButton.addEventListener("click", () => {
     newLangStringBuilder(italianLang);
 });
 
-
+let luckyButton = document.getElementById("luckyBtn")
+luckyButton.addEventListener("click", () => {
+    randLang();
+})
 
 
 
