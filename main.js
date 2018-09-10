@@ -72,7 +72,7 @@ const newLangStringBuilder = (language) => {
     for (let i = 0; i < inputStringArray.length; i++) {
         outputString += `  ${language[inputStringArray[i]]}`;
         if (!language[inputStringArray[i]]){
-            outputString += 'Please try different greeting message. words not found';
+            outputString = 'Please type different greeting message. words not found';
         }
     }
     printToDom(outputString, 'output_textarea');
