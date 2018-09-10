@@ -57,11 +57,13 @@ const italianLang = {
     "to": "alla",
     "your": "tua"
 };
-
+// function for print to DOM
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = stringToPrint;
 }
+
+// function to translate language
 let outputString = '';
 const newLangStringBuilder = (language) => {
     outputString = ' ';
@@ -76,6 +78,7 @@ const newLangStringBuilder = (language) => {
     printToDom(outputString, 'output_textarea');
 }
 
+// function to display random language
 const randLang = () => {
     randLangBox = Math.floor(Math.random()*3);
     if (randLangBox===0) {
@@ -87,6 +90,7 @@ const randLang = () => {
     }
 }
 
+// event listener for all buttons
 let hindiButton = document.getElementById("hindiBtn");
 hindiButton.addEventListener("click", () => {
     newLangStringBuilder(hindiLang);
@@ -105,7 +109,7 @@ italianButton.addEventListener("click", () => {
 let luckyButton = document.getElementById("luckyBtn")
 luckyButton.addEventListener("click", () => {
     randLang();
-})
+});
 
 
 
