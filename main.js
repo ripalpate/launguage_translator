@@ -90,6 +90,12 @@ const randLang = () => {
     }
 }
 
+// function to read the translated text
+const textToSpeech = () => {
+let readOutputText = new SpeechSynthesisUtterance(outputString);
+window.speechSynthesis.speak(readOutputText);
+}
+
 // event listener for all buttons
 let hindiButton = document.getElementById("hindiBtn");
 hindiButton.addEventListener("click", () => {
@@ -111,6 +117,10 @@ luckyButton.addEventListener("click", () => {
     randLang();
 });
 
+let audioButton = document.getElementById("textToSpeech")
+audioButton.addEventListener("click", () => {
+    textToSpeech();
+});
 
 
 
