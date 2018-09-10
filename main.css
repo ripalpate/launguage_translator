@@ -20,8 +20,7 @@ body {
 }
 #output_textareaContainer {
     border: 1px solid grey;
-    margin: 20px auto;
-    max-width: 740px;
+    margin: 20px 375px;
     background-color: white;
     height: 250px;
     box-shadow: 5px 5px lightsteelblue;
@@ -64,9 +63,4 @@ body {
 #luckyBtn:hover {
     background-color: lightcoral;
     cursor: pointer;
-}
-#textToSpeech {
-    position: relative;
-    top: 10px;
-    left: 325px;
 }
