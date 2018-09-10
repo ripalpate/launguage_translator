@@ -109,12 +109,12 @@ italianButton.addEventListener("click", () => {
 let luckyButton = document.getElementById("luckyBtn")
 luckyButton.addEventListener("click", () => {
     randLang();
-})
+});
 
 let audioButton = document.getElementById("textToSpeech")
 audioButton.addEventListener("click", () => {
     textToSpeech();
-})
+});
 
 
 
