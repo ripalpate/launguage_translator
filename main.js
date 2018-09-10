@@ -70,7 +70,7 @@ const newLangStringBuilder = (language) => {
     for (let i = 0; i < inputStringArray.length; i++) {
         outputString += `  ${language[inputStringArray[i]]}`;
         if (!language[inputStringArray[i]]){
-            alert('Please try different words. word not found');
+            outputString = 'Please type different greeting message. words not found';
         }
     }
     printToDom(outputString, 'output_textarea');
@@ -85,6 +85,10 @@ const randLang = () => {
     } else {
         newLangStringBuilder(italianLang);
     }
+}
+const textToSpeech = () => {
+let readOutputText = new SpeechSynthesisUtterance(outputString);
+window.speechSynthesis.speak(readOutputText);
 }
 
 let hindiButton = document.getElementById("hindiBtn");
@@ -107,7 +111,10 @@ luckyButton.addEventListener("click", () => {
     randLang();
 })
 
-
+let audioButton = document.getElementById("textToSpeech")
+audioButton.addEventListener("click", () => {
+    textToSpeech();
+})
 
 
 
