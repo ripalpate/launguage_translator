@@ -86,6 +86,8 @@ const randLang = () => {
         newLangStringBuilder(italianLang);
     }
 }
+
+// function to read the translated text
 const textToSpeech = () => {
 let readOutputText = new SpeechSynthesisUtterance(outputString);
 window.speechSynthesis.speak(readOutputText);
